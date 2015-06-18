@@ -91,10 +91,10 @@ public class SpringClusterMonitor extends AggregateClusterMonitor {
 					throw new RuntimeException(
 							"Configured to use port, but port is not in host attributes");
 				}
-				return String.format("http://%s:%s/%s", host.getHostname(), host
+				return String.format("https://%s:%s/%s", host.getHostname(), host
 						.getAttributes().get("port"), url);
 			}
-			return "http://" + host.getHostname() + url;
+			return "https://" + host.getHostname() + url;
 		}
 	};
 
